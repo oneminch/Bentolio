@@ -1,4 +1,8 @@
-# A Simple Portfolio
+# Bentolio
+
+A Minimal Portfolio Template Built with Astro + GSAP.
+
+![Screenshot](/public/screenshot.png)
 
 ## Credit
 
