@@ -1,10 +1,17 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
-	integrations: [mdx(), sitemap()],
+  site: "https://lite.minch.dev",
+  integrations: [tailwind(), icon()],
+  devToolbar: {
+    enabled: false
+  },
+  vite: {
+    ssr: {
+      noExternal: ["gsap"]
+    }
+  }
 });

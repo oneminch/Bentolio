@@ -1,50 +1,113 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import DefaultLayout from "../layouts/Default.astro";
+import { SOCIAL_LINKS } from "../consts";
+import SocialMediaLink from "../components/SocialMediaLink.astro";
+import LabelledIcon from "../components/LabelledIcon.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<DefaultLayout>
+  <article
+    class="flex flex-col gap-4 *:grid *:grid-cols-12 *:gap-4 *:w-full *:*:min-h-16 *:*:py-4 *:*:px-6 sm:*:*:py-6 sm:*:*:px-10 *:*:border *:*:border-zinc-200 dark:*:*:border-zinc-700 *:*:bg-zinc-50/50 dark:*:*:bg-zinc-800/25 *:text-zinc-950 dark:*:text-zinc-300"
+  >
+    <!-- Hero -->
+    <div class="grid-rows-2">
+      <!-- Intro -->
+      <div
+        class="animate-element opacity-0 col-span-full lg:col-span-8 row-span-2 space-y-6"
+      >
+        <img
+          src="/profile.jpg"
+          alt="My Profile Picture"
+          class="w-16 h-16 bg-zinc-800 rounded-full"
+        />
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold !pb-6 sm:!pb-8 *:inline-block space-y-4"
+        >
+          <p>
+            Hi, I'm Dawit
+            <span id="wave">👋</span>
+          </p>
+          <p
+            class="text-transparent bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-2xl sm:text-3xl lg:text-4xl"
+          >
+            I Craft Delightful & Accessible Web Apps.
+          </p>
+        </h2>
+      </div>
+      <!-- Social Media -->
+      {
+        SOCIAL_LINKS.map((item) => (
+          <SocialMediaLink
+            href={item.profileUrl}
+            name={item.socialMediaName}
+            icon={item.socialMediaIcon}
+            backgroundColor={item.socialMediaBgColor}
+            textColor={item.socialMediaTextColor}
+            class="animate-element opacity-0 col-span-3 lg:col-span-2"
+          />
+        ))
+      }
+    </div>
+
+    <!-- About -->
+    <div class="grid-rows-1">
+      <p
+        class="animate-element opacity-0 col-span-full font-medium gap-4 !py-6 sm:!py-10 text-zinc-700 dark:text-zinc-300 text-lg sm:text-xl lg:text-2xl"
+      >
+        I'm a Full-Stack Problem-Solver specializing in <LabelledIcon
+          label="React"
+          icon="logos:react"
+        />, <LabelledIcon label="Tailwind CSS" icon="logos:tailwindcss-icon" />,
+        and <LabelledIcon label="Node.js" icon="logos:nodejs-icon-alt" />. I
+        sometimes write articles on various software development topics. I'm
+        also a hobbyist photographer.
+      </p>
+    </div>
+
+    <!-- Miscellany -->
+    <div class="grid-rows-1">
+      <!-- Contact -->
+      <a
+        class="animate-element opacity-0 flex flex-col items-center justify-center gap-y-2 col-span-full lg:col-span-3 focus-visible:global-focus hover:!scale-105"
+        href="https://minch.dev/contact"
+      >
+        <Icon
+          name="heroicons:chat-bubble-oval-left-20-solid"
+          class="text-3xl lg:text-5xl"
+        />
+        <p class="text-center text-xl font-semibold">Contact</p>
+      </a>
+
+      <!-- Newsletter -->
+      <div
+        class="animate-element opacity-0 col-span-full lg:col-span-9 row-span-1 flex items-center justify-center !py-8"
+      >
+        <form class="w-full flex flex-col gap-4">
+          <label class="text-lg font-semibold" for="newsletter-input">
+            Subscribe to My Weekly Newsletter
+          </label>
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-2 *:h-10 focus-visible:*:global-focus"
+          >
+            <input
+              id="newsletter-input"
+              type="email"
+              placeholder="your@email.com"
+              class="w-full border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 px-4 py-1"
+              disabled
+            />
+            <button
+              type="submit"
+              class="w-full sm:w-auto flex justify-center items-center gap-2 bg-green-500 hover:bg-green-300 px-4 py-2 text-zinc-900 font-medium"
+              disabled
+            >
+              Subscribe
+              <Icon name="heroicons:envelope" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </article>
+</DefaultLayout>

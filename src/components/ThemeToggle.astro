@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  id="theme-toggle"
+  class="w-10 h-10 flex items-center justify-center text-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/50 dark:bg-zinc-800/25 hover:bg-zinc-200 dark:hover:bg-zinc-700 *:text-zinc-950 dark:*:text-zinc-300 focus-visible:global-focus"
+>
+  <span class="sr-only">Toggle Theme</span>
+
+  <Icon name="heroicons:sun-20-solid" class="hidden dark:inline-block" />
+  <Icon name="heroicons:moon-20-solid" class="dark:hidden" />
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+
+    themeToggle?.addEventListener("click", () => {
+      html.classList.toggle("dark");
+      html.classList.toggle("light");
+    });
+  });
+</script>

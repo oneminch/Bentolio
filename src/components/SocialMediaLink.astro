@@ -1,0 +1,37 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+import { type SocialLink } from "../consts";
+
+type Props = HTMLAttributes<"a"> & {
+  name: SocialLink["socialMediaName"];
+  icon: SocialLink["socialMediaIcon"];
+  backgroundColor: SocialLink["socialMediaBgColor"];
+  textColor: SocialLink["socialMediaTextColor"];
+};
+
+const {
+  href,
+  class: className,
+  icon,
+  name,
+  backgroundColor,
+  textColor,
+  ...props
+} = Astro.props;
+---
+
+<a
+  href={href}
+  title={name}
+  aria-label={name}
+  class:list={[
+    "flex items-center justify-center text-2xl sm:text-3xl !p-0 hover:!scale-105 focus-visible:global-focus",
+    backgroundColor,
+    textColor,
+    className
+  ]}
+  {...props}
+>
+  <Icon name={icon} />
+</a>

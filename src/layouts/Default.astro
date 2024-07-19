@@ -1,0 +1,58 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .animate-element {
+        @apply transition-transform duration-200 ease-linear;
+      }
+    </style>
+  </head>
+  <body class="animate-layout opacity-0">
+    <Header />
+
+    <main class="min-h-full">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      import { gsap } from "gsap";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.fromTo(
+          ".animate-layout",
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.75,
+            delay: 0.5,
+            ease: "elastic.out(0.5, 0.3)"
+          }
+        );
+
+        gsap.fromTo(
+          ".animate-element",
+          { scale: 0.75, opacity: 0, y: 20 },
+          {
+            scale: 1,
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            delay: 1,
+            ease: "elastic.out(0.5, 0.3)",
+            stagger: 0.2
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
