@@ -15,8 +15,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(astro@4.12.0(typescript@5.5.3))(tailwindcss@3.4.6)
       '@fontsource/space-grotesk':
-        specifier: ^5.0.18
-        version: 5.0.18
+        specifier: ^5.2.6
+        version: 5.2.6
       astro:
         specifier: ^4.12.0
         version: 4.12.0(typescript@5.5.3)
@@ -369,8 +369,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource/space-grotesk@5.0.18':
-    resolution: {integrity: sha512-uhJ5pk8I2OS2VTsZNuzYTUOH3yX9nEx3moCOreA5MZKs77pWtchhdBezUO2o6TuBWnR7q3xw/3iMR+0kG+LZ5g==}
+  '@fontsource/space-grotesk@5.2.6':
+    resolution: {integrity: sha512-Ejf50hUdoWYFkVdqckXxXuIY3tPgQZ/095EHa21uLBOuk7CQAlxqSdkPu5y47Xv+xa8A4TSrdAJlS9YdF5DqGg==}
 
   '@iconify-json/heroicons@1.1.22':
     resolution: {integrity: sha512-UNfSBdD/JBYBvFFhce6e3FsmeqshGz8u964R36npJvIzuORhIHUXrFerulBWFmbG0V1xvMqLZVZc4bPyjP5p7A==}
@@ -2678,7 +2678,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@fontsource/space-grotesk@5.0.18': {}
+  '@fontsource/space-grotesk@5.2.6': {}
 
   '@iconify-json/heroicons@1.1.22':
     dependencies:
