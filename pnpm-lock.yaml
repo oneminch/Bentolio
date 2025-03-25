@@ -34,8 +34,8 @@ importers:
         version: 5.5.3
     devDependencies:
       '@iconify-json/heroicons':
-        specifier: ^1.1.22
-        version: 1.1.22
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/logos':
         specifier: ^1.1.43
         version: 1.1.43
@@ -372,8 +372,8 @@ packages:
   '@fontsource/space-grotesk@5.0.18':
     resolution: {integrity: sha512-uhJ5pk8I2OS2VTsZNuzYTUOH3yX9nEx3moCOreA5MZKs77pWtchhdBezUO2o6TuBWnR7q3xw/3iMR+0kG+LZ5g==}
 
-  '@iconify-json/heroicons@1.1.22':
-    resolution: {integrity: sha512-UNfSBdD/JBYBvFFhce6e3FsmeqshGz8u964R36npJvIzuORhIHUXrFerulBWFmbG0V1xvMqLZVZc4bPyjP5p7A==}
+  '@iconify-json/heroicons@1.2.2':
+    resolution: {integrity: sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg==}
 
   '@iconify-json/logos@1.1.43':
     resolution: {integrity: sha512-UtvL1yDHUr9dl1Tqihh6K9m5dmbYKOYyLf3i9aKhymSW76QjOCGjpgQc0PQ4GJCAdU1cAMu+WO61TgPxdonrlg==}
@@ -2680,7 +2680,7 @@ snapshots:
 
   '@fontsource/space-grotesk@5.0.18': {}
 
-  '@iconify-json/heroicons@1.1.22':
+  '@iconify-json/heroicons@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
