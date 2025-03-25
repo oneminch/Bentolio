@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.2",
+    "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/space-grotesk": "^5.0.18",
     "astro": "^4.12.0",
