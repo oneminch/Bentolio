@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.1.22",
-    "@iconify-json/logos": "^1.1.43",
+    "@iconify-json/logos": "^1.2.4",
     "@iconify-json/simple-icons": "^1.1.109"
   }
 }
