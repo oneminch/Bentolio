@@ -10,18 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.2",
+    "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.0",
-    "@fontsource/space-grotesk": "^5.0.18",
+    "@fontsource/space-grotesk": "^5.2.6",
     "astro": "^4.12.0",
-    "astro-icon": "^1.1.0",
-    "gsap": "^3.12.5",
+    "astro-icon": "^1.1.5",
+    "gsap": "^3.12.7",
     "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3"
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "@iconify-json/heroicons": "^1.1.22",
-    "@iconify-json/logos": "^1.1.43",
-    "@iconify-json/simple-icons": "^1.1.109"
+    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/simple-icons": "^1.2.29"
   }
 }
