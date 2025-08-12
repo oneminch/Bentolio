@@ -1,4 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -19,7 +23,7 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2025-05-15",
 
-  css: ["app/assets/css/main.css"],
+  css: [join(currentDir, "./app/assets/css/main.css")],
 
   devtools: { enabled: true },
 
