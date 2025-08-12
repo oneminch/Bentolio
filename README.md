@@ -1,8 +1,12 @@
-# Bentolio — Minimal Portfolio (Nuxt 4 + Tailwind CSS 4 + GSAP)
+# Bentolio
 
-A minimal portfolio template built with Nuxt 4, Tailwind CSS 4, and GSAP. All content and basic styling are configured via `app/app.config.ts`.
+A minimal portfolio template built with Nuxt 4, Tailwind CSS 4, and GSAP.
+
+All content and basic styling are configured via `app/app.config.ts`.
 
 ![Screenshot](/public/screenshot.png)
+
+> For the original Astro version (not actively updated), check the [`astro`](https://github.com/oneminch/Bentolio/tree/astro) branch.
 
 ## Features
 
@@ -39,35 +43,35 @@ All site data lives in `app/app.config.ts` and is fully typed (see `app/utils/ty
 ```ts
 // app/app.config.ts (excerpt)
 export default defineAppConfig({
-	style: {
-		roundedItems: false,
-	},
-	portfolio: {
-		name: "Your Name",
-		subtitle: "What you do",
-		// company: "[COMPANY]",
-		avatar: "/profile.jpg",
-		bio: {
-			// Prefer html for rich content; fallback to text if html is empty
-			html: "I'm a <span class='font-bold text-primary'>Full‑Stack</span> Dev...",
-			text: "I'm a Full‑Stack Dev...",
-		},
-		socials: {
-			GitHub: {
-				socialMediaIcon: "simple-icons:github",
-				profileUrl: "https://github.com/your-handle",
-				socialMediaBgColor: "bg-black!",
-				socialMediaBorderColor: "border-black!",
-				socialMediaTextColor: "text-white!",
-			},
-			// X, LinkedIn, Bluesky are also supported
-		},
-		cta: {
-			contact: "you@example.com",
-			location: "Your City",
-			link: { url: "https://your-site.com", label: "Portfolio" },
-		},
-	},
+  style: {
+    roundedItems: false
+  },
+  portfolio: {
+    name: "Your Name",
+    subtitle: "What you do",
+    // company: "[COMPANY]",
+    avatar: "/profile.jpg",
+    bio: {
+      // Prefer html for rich content; fallback to text if html is empty
+      html: "I'm a <span class='font-bold text-primary'>Full‑Stack</span> Dev...",
+      text: "I'm a Full‑Stack Dev..."
+    },
+    socials: {
+      GitHub: {
+        socialMediaIcon: "simple-icons:github",
+        profileUrl: "https://github.com/your-handle",
+        socialMediaBgColor: "bg-black!",
+        socialMediaBorderColor: "border-black!",
+        socialMediaTextColor: "text-white!"
+      }
+      // X, LinkedIn, Bluesky are also supported
+    },
+    cta: {
+      contact: "you@example.com",
+      location: "Your City",
+      link: { url: "https://your-site.com", label: "Portfolio" }
+    }
+  }
 });
 ```
 
@@ -87,7 +91,7 @@ Supported social keys by default: `"X" | "LinkedIn" | "Bluesky" | "GitHub"`. To 
 ```css
 /*  Change `--color-primary` to customize your accent. */
 @theme {
-	--color-primary: var(--color-lime-500);
+  --color-primary: var(--color-lime-500);
 }
 ```
 
@@ -100,3 +104,7 @@ Supported social keys by default: `"X" | "LinkedIn" | "Bluesky" | "GitHub"`. To 
 ## Deployment
 
 This template is configured for static generation via `routeRules` in `nuxt.config.ts`.
+
+## Credit
+
+The design is inspired by [@TomIsLoading](https://twitter.com/TomIsLoading)'s Bento Grid from [Hover.dev](https://hover.dev).
