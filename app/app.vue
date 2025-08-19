@@ -56,18 +56,16 @@
     description: bio.text,
     ogTitle: `${name} · ${subtitle}`,
     ogDescription: bio.text,
-    ogImage: customOgImage,
-    twitterImage: customOgImage,
+    ogImage: () => customOgImage ?? "",
+    twitterImage: () => customOgImage ?? "",
     twitterCard: "summary_large_image"
   });
 
-  if (!customOgImage) {
-    defineOgImageComponent("SocialImage", {
-      name: name,
-      subtitle: subtitle,
-      avatar: avatar
-    });
-  }
+  defineOgImageComponent("SocialImage", {
+    name: name,
+    subtitle: subtitle,
+    avatar: avatar
+  });
 </script>
 
 <template>
