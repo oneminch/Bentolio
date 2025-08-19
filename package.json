@@ -1,31 +1,62 @@
 {
-	"name": "bentolio",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
-	},
-	"dependencies": {
-		"@fontsource/space-grotesk": "^5.2.8",
-		"@iconify-json/ph": "^1.2.2",
-		"@iconify-json/simple-icons": "^1.2.47",
-		"@nuxt/eslint": "1.8.0",
-		"@nuxt/icon": "2.0.0",
-		"@nuxtjs/color-mode": "^3.5.2",
-		"@tailwindcss/vite": "^4.1.11",
-		"@unhead/vue": "^2.0.14",
-		"eslint": "^9.33.0",
-		"gsap": "^3.13.0",
-		"nuxt": "^4.0.3",
-		"nuxt-og-image": "5.1.9",
-		"tailwindcss": "^4.1.11",
-		"unstorage": "^1.16.1",
-		"vue": "^3.5.18",
-		"vue-router": "^4.5.1"
-	},
-	"packageManager": "pnpm@10.14.0"
+  "name": "bentolio",
+  "version": "0.9.0",
+  "description": "A minimal portfolio template and layer built with Nuxt 4, Tailwind CSS 4, and GSAP.",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/oneminch/bentolio"
+  },
+  "homepage": "https://github.com/oneminch/bentolio#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Dawit",
+    "url": "https://bsky.app/profile/minch.dev"
+  },
+  "main": "./nuxt.config.ts",
+  "files": [
+    "nuxt.config.ts",
+    "app/**/*",
+    "public/**/*",
+    ".env.example",
+    "pnpm-workspace.yaml",
+    "eslint.config.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "nuxt",
+    "nuxt-layer",
+    "tailwindcss",
+    "gsap"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource/space-grotesk": "^5.2.8",
+    "@iconify-json/ph": "^1.2.2",
+    "@iconify-json/simple-icons": "^1.2.47",
+    "@nuxt/eslint": "1.8.0",
+    "@nuxt/icon": "2.0.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@tailwindcss/vite": "^4.1.11",
+    "@unhead/vue": "^2.0.14",
+    "eslint": "^9.33.0",
+    "gsap": "^3.13.0",
+    "nuxt": "^4.0.3",
+    "nuxt-og-image": "5.1.9",
+    "tailwindcss": "^4.1.11",
+    "unstorage": "^1.16.1",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "packageManager": "pnpm@10.14.0"
 }
