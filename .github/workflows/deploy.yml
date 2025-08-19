@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         run: pnpm run build --preset github_pages
-        working-directory: ./playground
+        working-directory: ./.playground
         # env:
         # NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
 
