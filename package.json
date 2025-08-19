@@ -34,11 +34,13 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "nuxt dev .playground",
+    "dev:prepare": "nuxt prepare .playground",
+    "prepare": "nuxt prepare",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^5.2.8",

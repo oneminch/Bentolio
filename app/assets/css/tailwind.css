@@ -1,85 +1,86 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@source "../../**/*";
 
 @theme {
-	--color-primary: var(--color-lime-500);
+  --color-primary: var(--color-lime-500);
 }
 
 @utility global-focus {
-	@apply outline-none ring-2 ring-offset-0 ring-primary/75;
+  @apply outline-none ring-2 ring-offset-0 ring-primary/75;
 }
 
 @utility animate-element {
-	@apply transition-transform opacity-0;
+  @apply transition-transform opacity-0;
 }
 
 * {
-	@apply box-border selection:bg-primary/50;
+  @apply box-border selection:bg-primary/50;
 }
 
 body {
-	font-family: "Space Grotesk", sans-serif;
-	word-wrap: break-word;
-	@apply w-full bg-white dark:bg-zinc-900;
+  font-family: "Space Grotesk", sans-serif;
+  word-wrap: break-word;
+  @apply w-full bg-white dark:bg-zinc-900;
 }
 
 #app {
-	@apply max-w-5xl min-w-xs w-full bg-white dark:bg-zinc-900 mx-auto break-words my-0 p-4 sm:p-6 md:p-12;
+  @apply max-w-5xl min-w-xs w-full bg-white dark:bg-zinc-900 mx-auto break-words my-0 p-4 sm:p-6 md:p-12;
 }
 
 /* Animated Wave Emoji */
 #wave {
-	@apply inline-block ml-1 origin-[70%_70%] animate-[10s_ease_2s_infinite_wave] hover:animate-[1.5s_ease_hoverwave];
+  @apply inline-block ml-1 origin-[70%_70%] animate-[10s_ease_2s_infinite_wave] hover:animate-[1.5s_ease_hoverwave];
 }
 
 @keyframes wave {
-	0% {
-		transform: rotate(0deg);
-	}
-	2.5%,
-	7.5% {
-		transform: rotate(14deg);
-	}
-	5% {
-		transform: rotate(-8deg);
-	}
-	10% {
-		transform: rotate(-4deg);
-	}
-	12.5% {
-		transform: rotate(10deg);
-	}
-	15% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  2.5%,
+  7.5% {
+    transform: rotate(14deg);
+  }
+  5% {
+    transform: rotate(-8deg);
+  }
+  10% {
+    transform: rotate(-4deg);
+  }
+  12.5% {
+    transform: rotate(10deg);
+  }
+  15% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes hoverwave {
-	0% {
-		transform: rotate(0deg);
-	}
-	10% {
-		transform: rotate(14deg);
-	}
-	20% {
-		transform: rotate(-8deg);
-	}
-	30% {
-		transform: rotate(14deg);
-	}
-	40% {
-		transform: rotate(-4deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	60% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

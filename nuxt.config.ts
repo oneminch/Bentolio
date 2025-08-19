@@ -19,6 +19,13 @@ export default defineNuxtConfig({
     transpile: ["gsap"]
   },
 
+  components: [
+    {
+      path: join(currentDir, "./app/components"),
+      pathPrefix: false
+    }
+  ],
+
   colorMode: { classSuffix: "" },
 
   compatibilityDate: "2025-05-15",

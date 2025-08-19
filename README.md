@@ -1,6 +1,6 @@
 # Bentolio
 
-A minimal portfolio template built with Nuxt 4, Tailwind CSS 4, and GSAP.
+A minimal portfolio template and Nuxt layer built with Nuxt 4, Tailwind CSS 4, and GSAP.
 
 All content and basic styling are configured via `app/app.config.ts`.
 
@@ -10,7 +10,7 @@ All content and basic styling are configured via `app/app.config.ts`.
 
 ## Features
 
-- **Nuxt 4**: Modern DX, serverless-friendly, and SSG by default
+- **Nuxt Layer**: Modern DX, serverless-friendly, and SSG by default
 - **Tailwind CSS 4**: Zero-config utility classes with CSS-first authoring
 - **GSAP animations**: Smooth entrance animations and micro‑interactions
 - **Dark Mode**: Toggle via `@nuxtjs/color-mode` (class strategy)
@@ -19,26 +19,25 @@ All content and basic styling are configured via `app/app.config.ts`.
 - **Static generation**: Pre‑rendered pages for easy deployment to any static host
 - **OG Image**: Automatically generated OG image via `nuxt-og-image`
 
-## Project Structure
-
-```
-app/
-  app.config.ts          # Portfolio data and style options (edit me)
-  app.vue                # Single-page portfolio content using app config
-  assets/css/main.css    # Tailwind entry + custom theme/utilities
-  components/            # UI components (Header, Footer, Social link, Theme toggle)
-  layouts/default.vue    # Layout + SEO meta + GSAP entrance animations
-  plugins/gsap.client.ts # Nuxt plugin providing `$gsap`
-  utils/types.ts         # Types for the app config
-public/
-  favicon.svg, logo.svg, profile.jpg, robots.txt
-nuxt.config.ts           # Nuxt configuration
-package.json             # Scripts and dependencies
-```
-
 ## Configure Your Portfolio
 
-All site data lives in `app/app.config.ts` and is fully typed (see `app/utils/types.ts`). Edit the example values to your own:
+To use as a template, you can simply clone and update the files to your liking.
+
+Alternatively, you can also use it as a Nuxt layer:
+
+```bash
+npm i -D @minch/bentolio
+```
+
+```ts
+export default defineNuxtConfig({
+  extends: ["@minch/bentolio"]
+});
+```
+
+Have a look at [.playground](/.playground/) to see how to set up as a layer.
+
+All page content lives in `app/app.config.ts` and is fully typed (see `app/utils/types.ts`). Edit the example values to your own:
 
 ```ts
 // app/app.config.ts (excerpt)
@@ -80,15 +79,17 @@ Supported social keys by default: `"X" | "LinkedIn" | "Bluesky" | "GitHub"`. To 
 ### Assets
 
 - Replace `public/profile.jpg` with your own avatar.
-- Update `public/favicon.svg` and `public/logo.svg` if desired.
-- OG image is auto-generated using the `nuxt-og-image` module.
+- Update `public/favicon.svg`, `public/og-image.png`, `public/logo.svg` and `public/logo.svg` if desired.
+- OG image can be auto-generated using the `nuxt-og-image` module.
 
 ### Theming and Styles
 
-- Tailwind entry is `app/assets/css/main.css`.
+- Tailwind entry is `app/assets/css/tailwind.css`.
 - Primary color is set via CSS theme variable:
 
 ```css
+@import "@minch/bentolio/tailwind";
+
 /*  Change `--color-primary` to customize your accent. */
 @theme {
   --color-primary: var(--color-lime-500);
@@ -98,7 +99,7 @@ Supported social keys by default: `"X" | "LinkedIn" | "Bluesky" | "GitHub"`. To 
 ### Animations
 
 - GSAP is provided via a Nuxt plugin (`$gsap`). See `app/layouts/default.vue` for entrance animations.
-- Elements with the `animate-element` utility class will animate in on page load. The initial state and transitions are defined in `app/assets/css/main.css`.
+- Elements with the `animate-element` utility class will animate in on page load. The initial state and transitions are defined in `app/assets/css/tailwind.css`.
 - The waving hand emoji animation is controlled via the `#wave` id in CSS.
 
 ## Deployment
