@@ -20,8 +20,10 @@
     title="Toggle Color Mode"
     @click="onClick">
     <ColorScheme placeholder="...">
-      <Icon v-if="colorMode.preference === 'dark'" name="ph:sun-duotone" />
-      <Icon v-else name="ph:moon-duotone" />
+      <Icon
+        :name="
+          colorMode.preference === 'dark' ? 'ph:sun-duotone' : 'ph:moon-duotone'
+        " />
     </ColorScheme>
   </button>
 </template>

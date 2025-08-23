@@ -44,7 +44,8 @@ export default defineNuxtConfig({
   icon: {
     mode: "svg",
     clientBundle: {
-      scan: true
+      scan: true,
+      icons: ["ph:sun-duotone", "ph:moon-duotone"]
     }
   },
 
