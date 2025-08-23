@@ -41,6 +41,11 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  icon: {
+    mode: "svg",
+    serverBundle: "local"
+  },
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/icon",
