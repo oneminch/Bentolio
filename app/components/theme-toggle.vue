@@ -19,14 +19,8 @@
     ]"
     @click="onClick">
     <ColorScheme placeholder="...">
-      <template v-if="colorMode.value === 'dark'">
-        <Icon name="ph:sun-duotone" class="w-5 h-5" />
-        <span class="sr-only">Dark Mode</span>
-      </template>
-      <template v-else>
-        <Icon name="ph:moon-duotone" class="w-5 h-5" />
-        <span class="sr-only">Light Mode</span>
-      </template>
+      <Icon v-if="colorMode.preference === 'dark'" name="ph:sun-duotone" />
+      <Icon v-else name="ph:moon-duotone" />
     </ColorScheme>
   </button>
 </template>
