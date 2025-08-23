@@ -43,7 +43,9 @@ export default defineNuxtConfig({
 
   icon: {
     mode: "svg",
-    serverBundle: "local"
+    clientBundle: {
+      scan: true
+    }
   },
 
   modules: [
@@ -54,7 +56,7 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    "/*": { prerender: true }
+    "/**": { prerender: true }
   },
 
   vite: {
