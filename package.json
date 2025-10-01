@@ -54,7 +54,7 @@
     "eslint": "^9.34.0",
     "gsap": "^3.13.0",
     "nuxt": "^4.0.3",
-    "nuxt-og-image": "5.1.9",
+    "nuxt-og-image": "5.1.11",
     "tailwindcss": "^4.1.12",
     "unstorage": "^1.17.0",
     "vue": "^3.5.19",
