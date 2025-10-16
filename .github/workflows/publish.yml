@@ -2,9 +2,8 @@ name: Publish to NPM
 
 on:
   push:
-    branches: [main]
-    paths:
-      - "package.json"
+    tags:
+      - 'v*'
 
 jobs:
   publish:
@@ -12,6 +11,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,25 +28,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Check if version changed
-        id: check-version
-        run: |
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          PUBLISHED_VERSION=$(npm view @minch/bentolio version 2>/dev/null || echo "0.0.0")
-
-          echo "Current version: $CURRENT_VERSION"
-          echo "Published version: $PUBLISHED_VERSION"
-
-          if [ "$CURRENT_VERSION" != "$PUBLISHED_VERSION" ]; then
-            echo "should-publish=true" >> $GITHUB_OUTPUT
-            echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
-          else
-            echo "should-publish=false" >> $GITHUB_OUTPUT
-            echo "Version hasn't changed, skipping publish"
-          fi
-
       - name: Publish to NPM
-        if: steps.check-version.outputs.should-publish == 'true'
         run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
