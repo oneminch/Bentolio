@@ -1,11 +1,9 @@
 {
   "name": "@minch/bentolio",
-  "version": "0.9.17",
+  "version": "0.9.18",
   "description": "A minimal portfolio template and layer built with Nuxt 4, Tailwind CSS 4, and GSAP.",
   "type": "module",
-  "repository": {
-    "url": "https://github.com/oneminch/bentolio"
-  },
+  "repository": "github:oneminch/bentolio",
   "homepage": "https://github.com/oneminch/bentolio#readme",
   "license": "MIT",
   "author": {
