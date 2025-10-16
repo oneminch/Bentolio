@@ -27,5 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Upgrade npm to latest version
+        run: npm install -g npm@latest
+
       - name: Publish to NPM
-        run: pnpm publish --no-git-checks
+        run: npm publish # pnpm fails 
