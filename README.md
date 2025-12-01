@@ -6,7 +6,7 @@ All content and basic styling are configured via `app/app.config.ts`.
 
 ![Screenshot](/public/screenshot.png)
 
-> For the original Astro version (not actively updated), check the [`astro`](https://github.com/oneminch/Bentolio/tree/astro) branch.
+> For the original Astro version (not actively updated), check the [`astro`](https://github.com/oneminch/bentolio/tree/astro) branch.
 
 ## Features
 

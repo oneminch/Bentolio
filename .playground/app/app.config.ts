@@ -46,7 +46,7 @@ export default defineAppConfig({
       contact: "[firstname]@example.com",
       location: "Planet Earth",
       link: {
-        url: "https://github.com/oneminch/Bentolio",
+        url: "https://github.com/oneminch/bentolio",
         label: "Source Code"
       }
     }
